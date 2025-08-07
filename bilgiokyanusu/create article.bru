@@ -1,0 +1,45 @@
+meta {
+  name: create article
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:3000/articles
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "title": "Yapay Zekanın Geleceği",
+      "content": "Bu makalede yapay zekanın toplum üzerindeki etkilerini inceledik...",
+      "publish_date": "2025-07-22T12:00:00Z",
+      "update_date": "2025-07-22T12:00:00Z",
+      "like_count": 0,
+      "writer_id": 1,
+      "share_count": 0,
+      "view_count": 0,
+      "tags": ["teknoloji", "yapay zeka", "gelecek"],
+      "comments": [
+          {
+              "reader_name": "Ahmet",
+              "like_count": 0,
+              "comment_date": "2025-07-22T12:05:00Z",
+              "comment_content": "Çok faydalı bir makale, teşekkürler!"
+          },
+          {
+              "reader_name": "Zeynep",
+              "like_count": 0,
+              "comment_date": "2025-07-22T12:10:00Z",
+              "comment_content": "Gelecekte bizi nelerin beklediğini görmek ilginç olacak."
+          }
+      ]
+  }
+  
+  
+}
+
+settings {
+  encodeUrl: true
+}
