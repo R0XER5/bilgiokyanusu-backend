@@ -4,7 +4,7 @@ const app = express();
 const PORT = 3000;
 
 app.use(cors({
-    origin: 'http://localhost:5173', // frontend'in adresi
+    origin: 'http://localhost:5174', // frontend'in adresi
     credentials: true
   }));
   

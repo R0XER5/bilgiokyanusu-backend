@@ -35,11 +35,12 @@ router.post('/', (req, res) => {
         });
     });
 });
+
 // id ile admin getir
 router.get('/:id', (req, res) => {
     const adminId = req.params.id;
 
-    const query = `SELECT id, first_name, last_name, email FROM admin WHERE id = ?`;
+    const query = 'SELECT id, first_name, last_name, email FROM admin WHERE id = ?';
 
     db.get(query, [adminId], (err, row) => {
         if (err) {
@@ -55,4 +56,4 @@ router.get('/:id', (req, res) => {
     });
 });
 
-module.exports = router;
+module.exports = router;
